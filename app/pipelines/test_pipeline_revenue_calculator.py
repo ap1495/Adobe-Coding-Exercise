@@ -2,29 +2,12 @@ from dagster import execute_pipeline
 from datetime import date
 from app.pipelines.pipeline_revenue_calculator import calculate_revenue_pipeline
 from app_enums import SPARK_APP_NAME, TAB_FILE_DELIMITER
-from app.file_types.file_types import BaseFileType
 
-def calculate_revenue_app(file_path):
-    """
-    Function to trigger revenue calculator pipeline
-
-    Parameters
-    ----------
-    file_path : str
-        Path of the file from which revenue has to be calculated.
-
-    Returns
-    -------
-    Pipeline execution status.
-
-    """
+def test_calculate_revenue_pipeline():
     today_date = date.today()
-    folder_name = "./output_files/" + str(today_date) + "_SearchKeywordPerformance"
-    print('folder', folder_name)
-    
-    file_type_obj = BaseFileType.initialize_file_type_obj("\t")
-    file_delimiter = file_type_obj.get_delimiter()
-    
+    folder_name = str(today_date) + "_SearchKeywordPerformance"
+    file_path = "../../../adobe_data.tsv"
+    file_delimiter = TAB_FILE_DELIMITER
     run_config = {
         "solids": {
             "create_pyspark_dataframe": {
@@ -64,6 +47,5 @@ def calculate_revenue_app(file_path):
                 }
             }
         }
-    pipeline_result = execute_pipeline(pipeline=calculate_revenue_pipeline, run_config=run_config)
-    
-    return "Calculate_Revenue_Pipeline_Success_Status: " + str(pipeline_result.success)
+    pipeline_result = execute_pipeline(calculate_revenue_pipeline, run_config=run_config)
+    assert pipeline_result.success

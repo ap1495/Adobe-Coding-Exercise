@@ -4,7 +4,7 @@ from app.solids.solid_get_search_keyword import get_search_keyword
 from app.solids.solid_calculate_revenue import calculate_revenue
 
 def test_get_search_keyword():
-    file_path = "C:/Users/sanja/Downloads/adobe_data.tsv"
+    file_path = "../../../adobe_data.tsv"
     delimiter = "\t"
     spark_app_name = "Test_Suite"
     new_column_name1 = "Search_Engine"

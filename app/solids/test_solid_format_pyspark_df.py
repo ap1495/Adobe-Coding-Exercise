@@ -5,7 +5,7 @@ from app.solids.solid_calculate_revenue import calculate_revenue
 from app.solids.solid_format_pyspark_df import format_pyspark_df_and_write_to_destination
 
 def test_format_pyspark_df():
-    file_path = "C:/Users/sanja/Downloads/adobe_data.tsv"
+    file_path = "../../../adobe_data.tsv"
     delimiter = "\t"
     spark_app_name = "Test_Suite"
     new_column_name1 = "Search_Engine"
