@@ -1,1 +1,0 @@
-TAB_FILE_DELIMITER = "\t"
