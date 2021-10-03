@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from app_enums import TAB_FILE_DELIMITER, COMMA_FILE_DELIMITER, PIPE_FILE_DELIMITER
+from app_enums import TAB_FILE_TYPE, COMMA_FILE_TYPE, PIPE_FILE_TYPE
 
 class BaseFileType:
     def __init__(self):
@@ -7,13 +7,13 @@ class BaseFileType:
     
     @classmethod
     def initialize_file_type_obj(cls, delimiter):
-        if delimiter == TAB_FILE_DELIMITER:
+        if delimiter == TAB_FILE_TYPE:
             file_type_obj = TabDelimitedFileType()
             
-        elif delimiter == COMMA_FILE_DELIMITER:
+        elif delimiter == COMMA_FILE_TYPE:
             file_type_obj = CommaDelimitedFileType()
             
-        elif delimiter == PIPE_FILE_DELIMITER:
+        elif delimiter == PIPE_FILE_TYPE:
             file_type_obj = PipeDelimitedFileType()
             
         return file_type_obj
