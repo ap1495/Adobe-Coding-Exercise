@@ -20,5 +20,8 @@ def create_pyspark_dataframe(file_path, delimiter, spark_app_name):
 
     """
     spark = SparkSession.builder.appName(spark_app_name).getOrCreate()
-    pyspark_df = spark.read.option("header", "true").csv(file_path, sep=delimiter)
+    spark.sparkContext.hadoopConfiguration.set("fs.s3a.access.key", "AKIAUF4F4O4JAH4O2T7H")
+    spark.sparkContext.hadoopConfiguration.set("fs.s3a.secret.key", "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")
+    spark.sparkContext.hadoopConfiguration.set("fs.s3a.endpoint", "s3://ap1495bucket")
+    pyspark_df = spark.read.option("header", "true").csv("s3a://ap1495bucket/adobe_data.tsv", sep=delimiter)
     return pyspark_df
