@@ -12,10 +12,19 @@ The goal of this project is to build an application to calculate revenue that th
 - Pytest
 
 # To run this application:
-- Run: python3 main.py <- path of file to be processed -> 
+- python3 main.py <- path of file to be processed ->
+
+![image](https://user-images.githubusercontent.com/35802181/135767568-42c06c20-0566-4f62-90a2-4c5699f9b288.png)
+
   
 # To run the test suite:
-- Run: python3 -m pytest app/
+- python3 -m pytest app/
+
+![image](https://user-images.githubusercontent.com/35802181/135767585-c5d6c485-355b-4d5b-9759-8dde3529bfc4.png)
+
 
 # To view the pipeline execution on Dagit UI:
-- Run: dagit -f <- path of the pipeline file ->
+- dagit -f <- path of the pipeline file ->
+
+![image](https://user-images.githubusercontent.com/35802181/135767620-b253a48e-49ae-43c9-8c88-cd9a5b79aa90.png)
+
