@@ -35,3 +35,6 @@ The goal of this project is to build an application to calculate revenue that th
 - pip install pyspark dagster dagit pytest
 - Run python application.
 ![image](https://user-images.githubusercontent.com/35802181/135770424-48c65dcc-f086-4b70-8b11-cc969f4d07db.png)
+
+# Deliverables:
+- Upon processing the hit level data file, an output file is generated at the path output_file/[Date]_SearchKeywordPerformance/ where [Date] is the date on which the application processed the hit level data file.
