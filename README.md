@@ -28,3 +28,10 @@ The goal of this project is to build an application to calculate revenue that th
 
 ![image](https://user-images.githubusercontent.com/35802181/135767620-b253a48e-49ae-43c9-8c88-cd9a5b79aa90.png)
 
+
+# Deployment to an EC2 instance:
+- Spin up a free tier eligible EC2 instance.
+- Download and install Python, Java, and Spark.
+- pip install pyspark dagster dagit pytest
+- Run python application.
+![image](https://user-images.githubusercontent.com/35802181/135770424-48c65dcc-f086-4b70-8b11-cc969f4d07db.png)
