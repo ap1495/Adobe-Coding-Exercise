@@ -1,0 +1,4 @@
+dagit==0.12.13
+dagster==0.12.13
+pyspark==3.1.2
+pytest==5.4.3
