@@ -8,10 +8,14 @@ The goal of this project is to build an application to calculate revenue that th
 # Libraries:
 - PySpark
 - Dagster
+- Dagit
 - Pytest
 
 # To run this application:
-- Run: python3 main.py <-path of file to be processed-> 
+- Run: python3 main.py <- path of file to be processed -> 
   
 # To run the test suite:
 - Run: python3 -m pytest app/
+
+# To view the pipeline execution on Dagit UI:
+- Run: dagit -f <- path of the pipeline file ->
