@@ -1,4 +1,4 @@
-from app_enums import PURCHASE_EVENT
+from app_consts import PURCHASE_EVENT
 def calculate_total_revenue(event_list_str, product_list_str):
     """
     Function to calculate revenue from list of events and list of products.

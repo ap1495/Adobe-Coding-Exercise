@@ -1,7 +1,7 @@
 from dagster import execute_pipeline
 from datetime import date
 from app.pipelines.pipeline_revenue_calculator import calculate_revenue_pipeline
-from app_enums import SPARK_APP_NAME, TAB_FILE_DELIMITER
+from app_consts import SPARK_APP_NAME, TAB_FILE_DELIMITER
 
 def test_calculate_revenue_pipeline():
     today_date = date.today()

@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from app_enums import TAB_FILE_TYPE, COMMA_FILE_TYPE, PIPE_FILE_TYPE, TAB_FILE_DELIMITER, PIPE_FILE_DELIMITER, COMMA_FILE_DELIMITER
+from app_consts import TAB_FILE_TYPE, COMMA_FILE_TYPE, PIPE_FILE_TYPE, TAB_FILE_DELIMITER, PIPE_FILE_DELIMITER, COMMA_FILE_DELIMITER
 
 class BaseFileType:
     def __init__(self):

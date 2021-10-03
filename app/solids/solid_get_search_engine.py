@@ -1,7 +1,6 @@
 from dagster import solid
 from pyspark.sql.functions import udf
 from pyspark.sql.types import StringType
-
 from app.utilities.find_search_engine import find_search_engine
 
 @solid
