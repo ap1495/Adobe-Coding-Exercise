@@ -6,9 +6,9 @@ The goal of this project is to build an application to calculate revenue that th
 - Python
 
 # Libraries:
-- PySpark
-- Dagster
 - Dagit
+- Dagster
+- PySpark
 - Pytest
 
 # To run this application:
