@@ -6,7 +6,7 @@ from app_enums import SPARK_APP_NAME, TAB_FILE_DELIMITER
 def test_calculate_revenue_pipeline():
     today_date = date.today()
     folder_name = str(today_date) + "_SearchKeywordPerformance"
-    file_path = "../../../adobe_data.tsv"
+    file_path = "../adobe_data.tsv"
     file_delimiter = TAB_FILE_DELIMITER
     run_config = {
         "solids": {
