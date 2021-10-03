@@ -24,6 +24,6 @@ def format_pyspark_df_and_write_to_destination(df, output_folder, output_file_de
     .sum(agg_column).withColumnRenamed(sum_agg_column, agg_column)\
     .na.drop("any").orderBy(col(agg_column).desc())
     
-    final_pyspark_df.coalesce(1).write.mode("overwrite").option("sep", output_file_delimiter, "header", True).csv(output_folder) 
+    final_pyspark_df.coalesce(1).write.mode("overwrite").option("sep", output_file_delimiter).option("header", "true").csv(output_folder) 
     
     return "File successfully processed"
