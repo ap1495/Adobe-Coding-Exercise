@@ -19,7 +19,7 @@ def calculate_revenue_app(file_path):
 
     """
     today_date = date.today()
-    folder_name = "../output_files/" + str(today_date) + "_SearchKeywordPerformance"
+    folder_name = "output_files/" + str(today_date) + "_SearchKeywordPerformance"
     
     file_type_obj = BaseFileType.initialize_file_type_obj("TAB")
     file_delimiter = file_type_obj.get_delimiter()
